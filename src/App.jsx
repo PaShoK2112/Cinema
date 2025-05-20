@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home';
+import { ToastContainer } from 'react-toastify';
+
+import Home from './pages/home';
 import Booking from './pages/Booking';
 import './styles/App.css';
 
@@ -10,10 +12,13 @@ const App = () => {
       <nav className="navbar">
         <Link to="/" className="nav-logo">Кінотеатр</Link>
       </nav>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/booking/:id" element={<Booking />} />
       </Routes>
+
+      <ToastContainer position="top-right" autoClose={3000} />
     </Router>
   );
 };
