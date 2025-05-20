@@ -138,8 +138,36 @@
   transform: translateY(0);
 }
 
-
 .booking-button-container {
   text-align: center;
   margin-top: 20px;
+}
+
+.hall-grid { 
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(5, 50px);
+  gap: 12px;
+  justify-content: center;
+}
+
+.seat {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seat:hover {
+  background-color: #43a047;
+}
+
+.seat.booked {
+  background-color: #e74c3c;
+  color: #fff;
+  cursor: not-allowed;
+  pointer-events: none;
 }
