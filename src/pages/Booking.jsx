@@ -4,7 +4,6 @@ import CinemaHall from '../components/CinemaHall';
 
 const Booking = () => {
   const { id } = useParams();
-
   return (
     <div className="page-container">
       <h2 className="page-title">Бронювання місць</h2>
